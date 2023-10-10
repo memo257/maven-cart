@@ -15,7 +15,7 @@
     </form>
     <tr>
         <th>Description</th>
-        <th class="right">Prices</th>
+        <th class="right">Price</th>
         <th>&nbsp;</th>
     </tr>
     
