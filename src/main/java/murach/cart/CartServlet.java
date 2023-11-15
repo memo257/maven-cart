@@ -46,7 +46,7 @@ public class CartServlet extends HttpServlet {
                     quantity = 1;
                 }
             } catch (NumberFormatException nfe) {
-                quantity = 1;
+                   quantity =1;
             }
 
             String path = sc.getRealPath("/WEB-INF/products.txt");
@@ -62,10 +62,15 @@ public class CartServlet extends HttpServlet {
             }
 
             session.setAttribute("cart", cart);
-            url = "/cart.jsp";
+           url = "/cart.jsp"; 
+           
         }
         else if (action.equals("checkout")) {
             url = "/checkout.jsp";
+            
+        if (action.equals("shop")) {            
+            url = "/index.jsp";    // the "index" page
+        } 
         }
 
         sc.getRequestDispatcher(url)
